@@ -18,7 +18,7 @@ import pages.TestMe_Login;
 public class AddingNewProduct 
 {
 	WebDriver driver;
-	@Before
+	/*@Before
 	public void start()
 	{
 		driver= DriverUtility.getDriver("chrome");
@@ -30,6 +30,7 @@ public class AddingNewProduct
 	{
 		
 	}
+	*/
 	@Given("logging in using username and password")
 	public void logging_in_using_username_and_password() 
 	{
@@ -43,7 +44,7 @@ public class AddingNewProduct
 	@When("adding new product to the cart")
 	public void adding_new_product_to_the_cart() 
 	{
-		driver.findElement(By.cssSelector("button[class='btn btn-nav']")).click();
+		/*driver.findElement(By.cssSelector("button[class='btn btn-nav']")).click();
 		WebElement li=driver.findElement(By.id("categorydropid"));
 		Select s1=new Select(li);
 		s1.selectByValue("11290");
@@ -56,18 +57,20 @@ public class AddingNewProduct
 		driver.findElement(By.id("brandid")).sendKeys("HP");
 		driver.findElement(By.id("description")).sendKeys("Full crazy Full gichhh");
 		driver.findElement(By.cssSelector("input[value='Add Product']")).click();
-       		
+       	*/	
 		
-		/*TestMe_Login.addProduct.click();
-		TestMe_Login.catagoryname.
-		te
+		TestMe_Login.addProduct.click();
+		TestMe_Login.catagoryname.click();
+		TestMe_Login.categoty();
+		TestMe_Login.subcatagoryname.click();
+		TestMe_Login.subcatagory();
 		TestMe_Login.producName.sendKeys("HP laptops");
 		TestMe_Login.price.sendKeys("56000");
 		TestMe_Login.quantity.sendKeys("10");
 		TestMe_Login.brand.sendKeys("HP");
 		TestMe_Login.description.sendKeys("Full crazy Full gichhh");
 		TestMe_Login.addProduct1.click();
-		*/
+		
 	   //driver.findElement(By.cssSelector("span[class='glyphicon glyphicon glyphicon-plus']")).click();
 	   //driver.findElement(By.id("catgName")).sendKeys("Laptops");
 	  // driver.findElement(By.id("catgDesc")).sendKeys("HP Laptops");

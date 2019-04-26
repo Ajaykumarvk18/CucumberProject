@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Select;
 
 public class TestMe_Login 
 {
@@ -14,10 +15,22 @@ public class TestMe_Login
 	public static WebElement loginButton;
 	@FindBy(how = How.CSS,using = "span[class='glyphicon glyphicon glyphicon-plus']")
 	public static WebElement addProduct;
-	@FindBy(how = How.CSS,using = "options[value='11290']")
+	@FindBy(how = How.ID,using = "categorydropid")
 	public static WebElement catagoryname;
-	@FindBy(how = How.CSS,using = "options[value='112112']")
+	public static void categoty()
+	{
+		Select s1 = new Select(catagoryname);
+		s1.selectByValue("11290");
+	}
+	
+	@FindBy(how = How.ID,using="subcategorydropid")
 	public static WebElement subcatagoryname;
+	
+	public static void subcatagory()
+	{
+		Select s2 = new Select(subcatagoryname);
+		s2.selectByValue("112112");
+	}
     @FindBy(how = How.ID,using = "prodid")
     public static WebElement producName;
     @FindBy(how = How.ID,using = "priceid")
