@@ -15,7 +15,7 @@ import pages.Payment;
 public class CaseStudy2_Paying 
 {
 	WebDriver driver;
-	/*@Before
+	@Before
 	public void before()
 	{
 		driver= DriverUtility.getDriver("chrome");
